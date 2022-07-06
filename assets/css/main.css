@@ -24,6 +24,15 @@ h1 {
     opacity: 1;
 }
 
+.card a {
+    color: #F2BA52!important;
+    text-decoration: none!important;
+}
+.card:hover a {
+    color: #F2935C!important;
+    text-decoration: none!important;
+}
+
 .cursorPointer:hover {
     cursor: pointer;
 }

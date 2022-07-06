@@ -78,7 +78,7 @@ Icons are taken from [Font Awesome](https://fontawesome.com/icons?d=gallery).
 
 ## Sources
 
-* Background image by [Mikael Gustafsson](https://www.artstation.com/artwork/Y2Wew)
+* Background image by [Simon Berger](https://unsplash.com/@8moments?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/animation-scenery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 Inspired by:
 
