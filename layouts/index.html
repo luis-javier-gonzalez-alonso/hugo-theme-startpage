@@ -5,8 +5,8 @@
 {{ if .Site.Params.searchEngines }}
     {{ range .Site.Params.searchEngines }}
         {{ if .activated }}
-            <form id="search-form-{{ .name }}" class="mb-3" action="{{ .url }}" method="get">
-                <input id="search-bar-{{ .name }}" class="form-control" type="text" autofocus type="text" placeholder="Search {{ .name }}" name="{{ cond (isset . "searchkey") .searchkey "q" }}" alt="Search {{ .name }}" onkeydown="if(event.keyCode === 13) { this.form.submit(); return false; }">
+            <form id="search-form-{{ .name }}" class="mb-3" action="{{ .url }}" method="get" target="_blank">
+                <input id="search-bar-{{ .name }}" class="form-control" type="text" autofocus type="text" placeholder="Search {{ .name }}" name="{{ cond (isset . "searchkey") .searchkey "q" }}" alt="Search {{ .name }}">
             </form>
         {{ end }}
     {{ end }}
@@ -20,7 +20,7 @@
                     <h5 class="card-title groupTitle">{{ .group }}</h5>                        
                     <ul class="list-group list-group-flush groupListList">
                         {{ range .items }}
-                            <li class="list-group-item groupListListItem"><a href="{{ .url }}" target="_self" class="groupLink"><i class="{{ .icon }}"></i>&nbsp;<span class="groupText">{{ .title | safeHTML }}</span></a></li>
+                            <li class="list-group-item groupListListItem"><a href="{{ .url }}" target="_blank" class="groupLink"><i class="{{ .icon }}"></i>&nbsp;<span class="groupText">{{ .title | safeHTML }}</span></a></li>
                         {{ end }}
                     </ul>
                 </div>
@@ -32,9 +32,9 @@
         {{ range .Site.Data.links }}
             {{ range .items }}
                 <div id="iconListEntry" class="card">
-                    <div class="card-body cursorPointer" onclick="location.href = '{{ .url }}'">
-                        <p class="card-text"><a href="{{ .url }}" target="_self" class="iconLink"><i class="fa-5x {{ .icon }}"></i></a></p>
-                        <p class="card-text"><a href="{{ .url }}" target="_self" class="iconLink">{{ .title | safeHTML }}</a></p>
+                    <div class="card-body cursorPointer" onclick="window.open('{{ .url }}', '_blank')">
+                        <p class="card-text"><a class="iconLink"><i class="fa-5x {{ .icon }}"></i></a></p>
+                        <p class="card-text"><a class="iconLink">{{ .title | safeHTML }}</a></p>
                     </div>
                 </div>
             {{ end }}
